@@ -1,0 +1,144 @@
+.wrapper {
+  @include size(100vw, calc(45vh - 25px));
+  @include flex_setting(row, flex-start, center, 10px);
+
+  .text {
+    margin-left: $boxmodelSingleValue;
+    writing-mode: vertical-rl;
+    height: 140px;
+    padding: 5px;
+    text-align: center;
+    background: $mainClearColor;
+    transform: rotate(180deg);
+    @include tablet {
+      order: 2;
+      transform: rotate(0deg);
+      margin-left: 0;
+      margin-right: $boxmodelSingleValue;
+    }
+  }
+
+  @include tablet {
+    margin-top: $boxmodelSingleValue;
+    @include size(50%, calc(100vh - 80px));
+  }
+
+  .leftBox {
+    @include flex-setting(column, flex-start, flex-end, 10px);
+    @include size(50%, calc(100vh - 80px));
+    .topImg {
+      position: relative;
+      @include size(90%, 45%);
+      cursor: pointer;
+      img {
+        box-shadow: -1px -1px 1px 1px rgba(121, 112, 112, 0.829);
+        @include size(100%);
+        object-fit: cover;
+      }
+      @include tablet {
+        @include size(70%, 55%);
+      }
+      .overlay {
+        @include tablet {
+          @include size(100%, 100%);
+        }
+      }
+    }
+    .bottomImg {
+      @include size(70%, 60%);
+      position: relative;
+      cursor: pointer;
+      @include tablet {
+        @include size(90%, 52%);
+      }
+      img {
+        box-shadow: -1px -1px 1px 1px rgba(121, 112, 112, 0.829);
+        @include size(100%, 88%);
+        object-fit: cover;
+      }
+    }
+
+    .overlay {
+      @include tablet {
+        @include size(100%, 88%);
+      }
+    }
+  }
+  .rightBox {
+    @include flexGDW(10px, column);
+    @include size(50%, 100%);
+
+    .topImg {
+      @include size(80%, 60%);
+      @include flex-setting(row, center);
+      cursor: pointer;
+      position: relative;
+      @include tablet {
+        @include size(80%, 70%);
+      }
+      img {
+        @include size(100%);
+        object-fit: cover;
+
+        @include tablet {
+          box-shadow: none;
+        }
+      }
+      .overlay {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        right: 0px;
+        opacity: 0;
+        @include size(100%);
+        color: $mainClearColor;
+        transition: opacity 0.3s ease-out;
+        @include flex-setting(row, center, center);
+        background-color: rgba(0, 0, 0, 0.422);
+        .overlayText {
+          text-align: center;
+        }
+        &:hover {
+          text-decoration: underline;
+          opacity: 1;
+        }
+      }
+    }
+    .bottomImg {
+      position: relative;
+      @include size(80%, 60%);
+      cursor: pointer;
+
+      @include tablet {
+        @include size(95%, 45%);
+      }
+      img {
+        @include size(100%);
+        object-fit: cover;
+        @include tablet {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  opacity: 0;
+  @include size(100%);
+  color: $mainClearColor;
+  transition: opacity 0.3s ease-out;
+  @include flex-setting(row, center, center);
+  background-color: $darkAlphaColor;
+
+  .overlayText {
+    text-align: center;
+  }
+  &:hover {
+    text-decoration: underline;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,51 @@
+@import "./colors.scss";
+//---------------------------
+// VARIABLES
+
+$mobile: 0px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@mixin flex_setting(
+  $direction: row,
+  $justify: flex-start,
+  $align: flex-start,
+  $gap: 0px,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+  flex-wrap: $wrap;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flexGDW($gap: 0px, $direction: row, $wrap: nowrap) {
+  display: flex;
+  gap: $gap;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+//---------------------------------------------
+//MEDIA QUERY
+
+// Mobile
+//--------------------------------------------------------------------//
+@mixin mobile {
+  @media (max-width: #{$tablet - 1}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}

@@ -1,0 +1,54 @@
+.cardWrapper {
+  padding: $boxmodelSingleValue - 10px;
+  background: $mainClearColor;
+  max-width: 200px;
+  max-height: 400px;
+  box-shadow: 0 0 4px rgba(60, 59, 59, 0.586);
+  border: 3px groove rgba(174, 114, 71, 0.725);
+  transition: transform $timeFast;
+  @include size(100%);
+  @include flexGDW(0px, column);
+  &:hover {
+    transform: scale(1.02);
+  }
+  .imgWrapper {
+    height: 160px;
+    img {
+      object-fit: cover;
+      @include size(100%);
+    }
+  }
+
+  .textBox {
+    padding: 5px 0;
+    justify-content: space-between;
+    @include flexGDW(2px, column);
+    .artName {
+      font-style: italic;
+      text-align: center;
+    }
+    .artistName {
+      text-align: center;
+      margin-bottom: 5px;
+      border-bottom: 1px solid gray;
+    }
+    p {
+      font-weight: bold;
+      font-size: 0.9rem;
+      .info {
+        font-weight: lighter;
+        font-size: 0.8rem;
+      }
+    }
+  }
+  a:link,
+  a:visited,
+  a:active {
+    color: #02366f;
+    align-self: flex-end;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

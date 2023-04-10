@@ -1,0 +1,4 @@
+.Artworks {
+  padding: $boxmodelSingleValue + 10px;
+  @include flex_setting(row, center, flex-start, 10px, wrap);
+}

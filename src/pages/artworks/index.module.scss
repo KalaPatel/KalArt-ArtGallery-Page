@@ -1,0 +1,81 @@
+.wrapper {
+  padding: $boxmodelSingleValue + 10px;
+  background-color: rgba(143, 130, 109, 0.432);
+  @include flex_setting(column, center, center, 20px);
+  // height: calc(100vh - 50px);
+
+  .gallery {
+    @include flex_setting(row, center, center, 10px);
+    img {
+      box-shadow: 4px 4px 2px rgba(26, 25, 25, 0.628);
+    }
+    button {
+      border: none;
+      background-color: $noColor;
+      text-align: center;
+      border-radius: 15px;
+      cursor: pointer;
+      font-size: 2rem;
+
+      .btn {
+        color: $brownCardColor;
+        text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.237);
+        transition: transform $timeFast;
+        &:hover {
+          transform: scale(1.3);
+        }
+      }
+    }
+    .disable {
+      background-color: $noColor;
+      cursor: inherit;
+      .btn {
+        color: $noColor;
+      }
+    }
+  }
+  .artworkInfo {
+    div {
+      @include flex_setting(row, space-between, center, 15px);
+      .title {
+        color: rgb(165, 99, 42);
+      }
+      .date {
+        font-size: 0.8rem;
+        color: rgb(113, 97, 97);
+      }
+    }
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: $mainClearColor;
+    .bioInfo {
+      font-style: italic;
+      font-size: 0.8rem;
+      color: rgb(99, 86, 86);
+    }
+    h4 {
+      margin-top: 10px;
+      color: $brownCardColor;
+    }
+    p {
+      color: $brownCardColor;
+      font-weight: bold;
+      font-size: 0.9rem;
+      .info {
+        font-weight: lighter;
+        font-size: 1rem;
+        color: rgb(36, 29, 29);
+      }
+    }
+    a:link,
+    a:visited,
+    a:active {
+      color: #02366f;
+      align-self: flex-end;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

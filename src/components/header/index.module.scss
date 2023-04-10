@@ -1,0 +1,23 @@
+.Header {
+  font-weight: bold;
+  background: rgb(153, 112, 83);
+  background: radial-gradient(
+    circle,
+    rgba(153, 112, 83, 0.7609195402298851) 23%,
+    rgba(203, 149, 87, 1) 68%,
+    rgba(156, 151, 146, 1) 94%
+  );
+  box-shadow: 1px 1px 1px rgba(26, 26, 26, 0.689);
+  @include flex_setting(row, center, center, 10px);
+  @include size(100%, 50px);
+  a:link,
+  a:visited,
+  a:active {
+    color: rgb(249, 247, 247);
+    text-decoration: none;
+    text-shadow: 2px 2px 3px rgb(62, 27, 3);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

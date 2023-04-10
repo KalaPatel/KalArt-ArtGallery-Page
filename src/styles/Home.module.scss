@@ -1,0 +1,6 @@
+.main {
+  @include flexGDW(0px, column);
+  @include tablet {
+    @include flexGDW(0px, row);
+  }
+}
