@@ -1,8 +1,8 @@
 .wrapper {
   padding: $boxmodelSingleValue + 10px;
   background-color: rgba(143, 130, 109, 0.432);
-  @include flex_setting(column, center, center, 20px);
-  // height: calc(100vh - 50px);
+
+  @include flex_setting(column, center, center, 25px);
 
   .gallery {
     @include flex_setting(row, center, center, 10px);

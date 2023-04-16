@@ -31,7 +31,7 @@ export default function Work({ artworkData }) {
           <Image
             src={artworkData?.additionalImages[num]}
             alt={artworkData.title}
-            width={320}
+            width={300}
             height={350}
             priority
           />

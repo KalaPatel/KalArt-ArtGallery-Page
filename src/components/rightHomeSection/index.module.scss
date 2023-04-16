@@ -25,7 +25,10 @@
 
   .leftBox {
     @include flex-setting(column, flex-start, flex-end, 10px);
-    @include size(50%, calc(100vh - 80px));
+    @include size(46%, calc(52vh - 65px));
+    @include tablet {
+      @include size(50%, calc(100vh - 80px));
+    }
     .topImg {
       position: relative;
       @include size(90%, 45%);
@@ -39,9 +42,7 @@
         @include size(70%, 55%);
       }
       .overlay {
-        @include tablet {
-          @include size(100%, 100%);
-        }
+        @include size(100%);
       }
     }
     .bottomImg {
@@ -59,9 +60,7 @@
     }
 
     .overlay {
-      @include tablet {
-        @include size(100%, 88%);
-      }
+      @include size(100%, 88%);
     }
   }
   .rightBox {
